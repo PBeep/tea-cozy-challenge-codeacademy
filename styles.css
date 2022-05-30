@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica", sans-serif;
+    font-size: 22px;
+    background-color: black;
+    text-align: center;
+}
+
+h2, h3, h4, h5, p, a {
+    color: seashell;
+}
+
+h2 {
+    padding-bottom: 15px;
+}
+
+/* common flex designs for hero, featured */
+.flex-container {
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+/* navbar and logo */
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+    z-index: 2; /*otherwise the position relative image appears over the navbar */
+}   
+
+#logo img { /*if you only style the logo it styles the container. remember to put the element selector as well */
+    height: 50px;
+    margin: 10px;
+}
+
+.nav-bar {
+    text-decoration: underline;
+}
+
+.nav-bar a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* hero and banner text */
+
+.hero {
+    background-image: url(images/img-mission-background.jpg);
+    /* position: relative; to be able to assign it height and width */
+    top: 70px; /*this is to accommodate the fixed navbar 69px and 1 px border */
+    height: 700px;
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.mission-banner {
+    background-color: black;
+    width: 100%;
+    padding: 10px 10px;
+}
+
+/* featured tea of the month section */
+
+.featured-tea {
+position: relative;
+flex-direction: column;
+top: 100px;
+width: 1000px;
+margin: 0 auto;
+}
+
+.featured-tea h4 {
+    margin-bottom: 30px;
+}
+#tea-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 150px;
+}
+.image img {
+    max-height: 200px;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+/* location */
+
+.location {
+    background-image: url(images/img-locations-background.jpg);
+    height: 500px;
+    width: 1200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.location > h2 {
+    padding: 30px 0 0 15px;
+}
+#location-container {
+    justify-content: center;
+}
+.box {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    margin: 15px 40px;
+    line-height: 4.5rem;
+    opacity: 1;
+}
+
+/* contact */
+
+.contact {
+    height: 200px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.footer {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
